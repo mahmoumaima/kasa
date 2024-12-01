@@ -1,0 +1,35 @@
+.logo {
+    width: Fixed (335px)px;
+    height: Hug (46.88px)px;
+    gap: 0px;
+    opacity: 0px;
+
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    list-style: none;
+}
+
+a {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34.22px;
+    text-align: right;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .visited {
+    text-decoration: underline;
+  }

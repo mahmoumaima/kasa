@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Composants
+import Header from './composants/header/Header';
+import Footer from './composants/footer/Footer';
+
+// Pages
+import Accueil from './pages/acceuil/Accueil';
+import Apropos from './pages/apropos/Apropos';
+import Logement from './pages/logement/logement';
+
+// Page d'erreur
+import Error404 from './pages/error/Error404';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header>
+        <Header/>
+      </header>
+      <main>
+          <Routes>
+            <Route path="/" element={<Accueil />} />
+            <Route path="/apropos" element={<Apropos />} />
+            <Route path="/logement/:id" element={<Logement />} />
+            <Route path="*" element={<Error404 />} />
+          </Routes>
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   )
 }
