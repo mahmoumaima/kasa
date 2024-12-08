@@ -1,13 +1,13 @@
 import Cards from "../../composants/card/Cards";
 import  style from './Accueil.module.css'
 import bandeauImg from '../../assets/bandeau.png'
+import Banner from "../../composants/banner/Banner";
 
 function Accueil() {
   return (
     <>
-      <section className={style.bandeau}>
-        <img src={bandeauImg} alt='bandeau image'/>
-        <div className={style.textOverlay}>Chez vous, partout et ailleurs</div>
+      <section>
+        <Banner image={bandeauImg} text="Chez vous, partout et ailleurs" />
       </section>
 
       <section className={style.gallery}>

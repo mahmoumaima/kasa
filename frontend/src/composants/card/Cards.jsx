@@ -26,7 +26,8 @@ function Cards() {
         {cards.map((card, index) => (
             <Link to={`/logement/${card.id}`} key={index}>
                 <article className={style.card}>
-                <h1 className={style.cardTitle}>{card.title}</h1>
+                    <img src={card.cover} alt="image cover" className={style.cardImg}/>
+                    <h1 className={style.cardTitle}>{card.title}</h1>
                 </article>
             </Link>
         ))}

@@ -12,7 +12,6 @@ html, body {
 body {
   display: flex;
   justify-content: center;
-  background-color: #f4f4f4;
 }
 
 #root{
@@ -20,7 +19,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 1440px;
-  min-height: 150%; 
+  min-height: 150%;
   background-color: white;
 }
 
