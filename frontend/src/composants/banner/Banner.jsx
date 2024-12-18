@@ -7,7 +7,7 @@ function Banner(props) {
     <>
       <div className={style.banner}>
         <img src={imageSrc} alt='bandeau image'/>
-        {textValue && <div className={style.textOverlay}>{textValue}</div>}
+        {textValue && <h1 className={style.textOverlay}>{textValue}</h1>}
       </div>
     </>
   );

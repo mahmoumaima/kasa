@@ -25,26 +25,27 @@
 .collapsHeader img {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 300ms ease;
 }
 
-.collapsDescription {
-    padding: 20px;
-    font-size: 14px;
-    min-height: 150px;
-    background: #F6F6F673;
-    animation: fadeIn 0.3s ease;
+.icon.rotated {
+    transform: rotate(180deg);
 }
   
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.collapsDescription {
+    display: none;
+    padding: 20px;
+    font-size: 14px;
+    background: #F6F6F673;
+    transform: scaleY(0);
+    transform-origin: top; 
+    transition: transform 300ms ease, max-height 300ms ease;
+}
+
+.collapsDescription.open {
+    display: block;
+    min-height: 100px;
+    transform: scaleY(1);
 }
   
 

@@ -27,6 +27,7 @@ function Cards() {
             <Link to={`/logement/${card.id}`} key={index}>
                 <article className={style.card}>
                     <img src={card.cover} alt="image cover" className={style.cardImg}/>
+                    <div className={style.shadow}></div>
                     <h1 className={style.cardTitle}>{card.title}</h1>
                 </article>
             </Link>
