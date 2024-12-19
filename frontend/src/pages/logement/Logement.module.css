@@ -1,41 +1,57 @@
 .carroussel {
-    min-height: 300px;
-    border: 1px solid red;
+    position: relative;
 }
 
 .logement {
     margin: 50px 0;
     display: grid;
+    gap: 10px 50px;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
     width: 100%;
 }
 
-
 .itemLeft {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-  }
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
 
-  .itemRight {
-    display: flex;
-    align-items: flex-start;
-    justify-content: right;
-  }
-  
-  .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    gap: 5px;
-    width:100%;
-  }
+.itemRight {
+  display: flex;
+  align-items: flex-start;
+  justify-content: right;
+}
 
-  .right {
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
-    gap: 5px;
-    width:100%;
-  }
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 5px;
+  width:100%;
+}
+
+.right {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  gap: 5px;
+  width:100%;
+}
+
+.title h1 {
+  color: #FF6060;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51px;
+}
+
+.title h2 {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.description {
+  text-align: justify;
+}

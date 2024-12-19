@@ -1,0 +1,20 @@
+.profil {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+.profil h1 {
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: right;
+}
+
+.profil img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}

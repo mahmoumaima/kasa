@@ -1,0 +1,25 @@
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+.tags ul {
+    margin: 0;
+    padding: 0; 
+    gap: 10px;
+}
+
+.tags li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    height: 25px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+}

@@ -2,6 +2,11 @@ import styles from './Logement.module.css'
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Collaps from '../../composants/collaps/Collaps';
+import Carrousel from '../../composants/carousel/Carrousel';
+import Rating from '../../composants/Rating/rating';
+import Tags from '../../composants/tags/Tags';
+import Equipement from '../../composants/equipement/Equipement';
+import Profil from '../../composants/profil/Profil';
 
 function Logement() {
 
@@ -42,49 +47,41 @@ function Logement() {
       { logement? (
         <div>
           <section className={styles.carroussel}>
+            <Carrousel images={logement.pictures} />
           </section>
           <section className={styles.logement}>
           <div className={styles.itemLeft}>
-            <div className={styles.left}>
+            <div className={`${styles.left} ${styles.title}`}>
               <h1>{logement.title}</h1>
               <h2>{logement.location}</h2>
             </div>
           </div>
           <div className={styles.itemRight}>
             <div className={styles.right}>
-              <h2>{logement.host.name}</h2>
-              <img src={logement.host.picture}  alt="picture"/>
+              <Profil name={logement.host.name} picture={logement.host.picture}/>
             </div>
           </div>
           <div className={styles.itemLeft}>
             <div className={styles.left}>
-            <ul>
-              {logement.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
+            <Tags tags={logement.tags}/>
             </div>
           </div>
           <div className={styles.itemRight}>
             <div className={styles.right}>
-              <h2>Rating : {logement.rating}</h2>
+              <Rating rate={logement.rating}/>
             </div>
           </div>
           <div className={styles.itemLeft}>
             <div className={styles.left}>
               <Collaps title="Description" key="collaps-1">
-                <p>{logement.description}</p>
+                <p className={styles.description}>{logement.description}</p>
               </Collaps>
             </div>
           </div>
           <div className={styles.itemRight}>
             <div className={styles.right}>
               <Collaps title="Equipments" key="collaps-2">
-              <ul>
-                {logement.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
+                  <Equipement equipments={logement.equipments}/>
               </Collaps>
             </div>
           </div>
