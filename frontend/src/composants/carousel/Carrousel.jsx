@@ -27,17 +27,21 @@ function Carrousel({ images }) {
           />
         ))}
       </div>
-      <div className={styles.actions}>
-        <button onClick={decrement}>
-          <img src={leftArrow} alt="Flèche gauche" className={styles.arrow} />
-        </button>
-        <button onClick={increment}>
-          <img src={rightArrow} alt="Flèche droite" className={styles.arrow} />
-        </button>
-      </div>
-      <div className={styles.count}>
-        <p>{imageIndex+1}/{images.length}</p>
-      </div>
+      {images.length > 1 && (
+        <div>
+          <div className={styles.actions}>
+            <button onClick={decrement}>
+              <img src={leftArrow} alt="Flèche gauche" className={styles.arrow} />
+            </button>
+            <button onClick={increment}>
+              <img src={rightArrow} alt="Flèche droite" className={styles.arrow} />
+            </button>
+          </div>
+          <div className={styles.count}>
+            <p>{imageIndex+1}/{images.length}</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }
