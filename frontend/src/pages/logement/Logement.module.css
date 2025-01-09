@@ -55,3 +55,8 @@
 .description {
   text-align: justify;
 }
+
+.equipements ul {
+  flex-direction: column;
+  gap: 10px;
+}

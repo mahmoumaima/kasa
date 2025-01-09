@@ -3,11 +3,8 @@
     justify-content: right;
 }
 
-.star {
-    font-size: 2rem;
-    color: #E3E3E3;
-}
-  
-.filled {
-    color: #FF6060;
+.stars img {
+    width: 36px;
+    height: 36px;
+    padding-bottom: 15px;
 }

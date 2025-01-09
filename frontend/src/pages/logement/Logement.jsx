@@ -5,7 +5,6 @@ import Collaps from '../../composants/collaps/Collaps';
 import Carrousel from '../../composants/carousel/Carrousel';
 import Rating from '../../composants/Rating/rating';
 import Tags from '../../composants/tags/Tags';
-import Equipement from '../../composants/equipement/Equipement';
 import Profil from '../../composants/profil/Profil';
 
 function Logement() {
@@ -81,7 +80,13 @@ function Logement() {
           <div className={styles.itemRight}>
             <div className={styles.right}>
               <Collaps title="Equipments" key="collaps-2">
-                  <Equipement equipments={logement.equipments}/>
+                <div className={styles.equipements}>
+                        <ul> 
+                            {logement.equipments.map((equipment, index) => (
+                                <li key={index}>{equipment}</li>
+                            ))}
+                        </ul>
+                </div>
               </Collaps>
             </div>
           </div>

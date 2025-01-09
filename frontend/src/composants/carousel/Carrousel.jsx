@@ -18,14 +18,11 @@ function Carrousel({ images }) {
   return (
     <>
       <div className={styles.images}>
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt={`picture-${index}`}
-            className={index === imageIndex ? styles.imageDispalyOn : styles.imageDispalyOff}
-          />
-        ))}
+        <img
+          key={imageIndex}
+          src={images[imageIndex]}
+          alt={`picture-${imageIndex}`}
+        />
       </div>
       {images.length > 1 && (
         <div>

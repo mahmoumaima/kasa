@@ -1,4 +1,6 @@
 import styles from "./Rating.module.css";
+import starOn from '../../assets/starOn.svg';
+import starOff from '../../assets/starOff.svg';
 
 function Rating({ rate }) {
 
@@ -8,12 +10,12 @@ function Rating({ rate }) {
     <>
         <div className={styles.stars}>
             {Array.from({ length: maxStars }, (_, index) => (
-                <span
-                key={index}
-                className={`${styles.star} ${index < rate ? styles.filled : ""}`}
-                >
-                &#9733;
-                </span>
+                <img
+                  key={index}
+                  src={`${index < rate ? starOn : starOff}`}
+                  className={`${index < rate ? "starOn" : "starOff"}`}
+                  alt={`picture-${index}`}
+                />
              ))}
         </div>
     </>
