@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Collaps from '../../composants/collaps/Collaps';
 import Carrousel from '../../composants/carousel/Carrousel';
-import Rating from '../../composants/Rating/rating';
+import Rating from '../../composants/rating/Rating';
 import Tags from '../../composants/tags/Tags';
 import Profil from '../../composants/profil/Profil';
 
