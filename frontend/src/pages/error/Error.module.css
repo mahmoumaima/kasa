@@ -21,3 +21,25 @@
 .errorPage a {
     font-size: 12px;
 }
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+    .errorPage {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .errorPage h1 {
+        font-size: 100px;
+    }
+    
+    .errorPage p {
+        font-size: 13px;
+        width: 60%;
+        margin: 0 auto;
+    }
+}

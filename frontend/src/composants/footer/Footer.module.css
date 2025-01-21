@@ -5,3 +5,29 @@
     line-height: 34px;
     text-align: center;
 }
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    .copyright {
+        font-size: 164px;
+        font-weight: 350;
+        line-height: 24px;
+    }
+}
+  
+@media (max-width: 480px) {
+    .copyright {
+        font-size: 12px;
+        font-weight: 250;
+        line-height: 12px;
+    }
+
+    footer p {
+        width : 120px;
+    }
+
+    footer img {
+        height: 20px;
+    }
+}
+  

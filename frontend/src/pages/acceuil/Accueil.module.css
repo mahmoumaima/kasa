@@ -12,3 +12,23 @@
   width: 30%;
   text-decoration: none; 
 }
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 5px;
+  }
+  
+  .gallery a {
+    width: 100%;
+  }
+}

@@ -60,3 +60,29 @@
   flex-direction: column;
   gap: 10px;
 }
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+  .logement {
+    grid-template-columns: 1fr; /* 1 colonne */
+  }
+
+  .title h1 {
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+  }
+  
+  .title h2 {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 10px;
+  }
+
+}

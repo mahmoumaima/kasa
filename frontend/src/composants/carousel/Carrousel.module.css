@@ -48,3 +48,24 @@
     text-align: center;
     color: #FFFFFF;
 }
+
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+    .images {
+        height: 250px;
+    }
+
+    .actions .arrow {
+        width: 16px;
+    }
+
+    .count {
+        font-size: 12px;
+        padding: 10px;
+    }
+}

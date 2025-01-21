@@ -14,32 +14,32 @@ body {
   justify-content: center;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1440px;
-  min-height: 150%;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh; /* Remplace min-height par 100% de la hauteur de l'écran */
   background-color: white;
 }
 
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Aligne les éléments aux extrémités */
+  justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 2rem; /* Utilisation d'unités relatives */
 }
 
 main {
   flex: 1;
-  padding: 0 50px 0px 50px;
+  padding: 0 2rem; /* Espacement flexible */
   display: block;
-  flex-direction: column;
 }
 
 footer {
-  height: 210px;
+  height: 210px; /* Réduction de la hauteur pour les petites résolutions */
   background-color: black;
   color: white;
   display: flex;
@@ -47,4 +47,21 @@ footer {
   align-items: center;
   flex-shrink: 0;
 }
+
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 2rem 1rem; /* Utilisation d'unités relatives */
+  }
+  
+  main {
+    padding: 0 1rem; /* Espacement flexible */
+  }
+}
+
 

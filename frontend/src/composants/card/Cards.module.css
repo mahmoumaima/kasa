@@ -38,4 +38,25 @@
     padding: 10px;
   }
 
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+  .cardImg {
+    height: 250px;
+  }
+  
+  .shadow {
+    height: 250px;
+  }
+
+  .cardTitle {
+    font-size: 12px; 
+  }
+}
+
  

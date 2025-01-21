@@ -1,6 +1,6 @@
 import styles from "./Rating.module.css";
-import starOn from '../../assets/starOn.svg';
-import starOff from '../../assets/starOff.svg';
+const starOn = '/src/assets/starOn.svg';
+const starOff = '/src/assets/starOff.svg';
 
 function Rating({ rate }) {
 

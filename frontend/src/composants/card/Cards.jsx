@@ -5,21 +5,26 @@ import  style from './Cards.module.css'
 function Cards() {
 
     // Déclare un état pour stocker les cartes
-  const [cards, setCards] = useState([]);
+    const [cards, setCards] = useState([]);
 
-   // Appel API lors du premier rendu du composant
-   useEffect(() => {
-        fetch('http://localhost:8080/api/properties')
-            .then(response => response.json()) // Convertir la réponse en JSON
-            .then(data => {
+    // Appel API lors du premier rendu du composant
+    useEffect(() => {
+        const fetchCards = async () => {
+            try {
+                const response = await fetch('http://localhost:8080/api/properties');
+                if (!response.ok) {
+                    throw new Error('Erreur réseau lors de la récupération des cartes');
+                }
+                const data = await response.json(); // Convertir la réponse en JSON
                 setCards(data); // Stocker les cartes dans l'état
-            })
-            .catch(err => {
+            } catch (error) {
                 // Affciher l'erreur dans la console
                 console.error("Erreur lors de la récupération des cartes:", error);
-            });
-        }, []
-    );
+            }
+        };
+            
+        fetchCards();
+    }, []);
 
   return (
     <>
