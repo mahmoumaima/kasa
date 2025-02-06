@@ -5,9 +5,9 @@ import  style from './Cards.module.css'
 function Cards() {
 
     // Déclare un état pour stocker les cartes
-    const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState([]);
 
-    // Appel API lors du premier rendu du composant
+   // Appel API lors du premier rendu du composant
     useEffect(() => {
         const fetchCards = async () => {
             try {
@@ -22,14 +22,14 @@ function Cards() {
                 console.error("Erreur lors de la récupération des cartes:", error);
             }
         };
-            
+
         fetchCards();
     }, []);
 
   return (
     <>
         {cards.map((card, index) => (
-            <Link to={`/logement/${card.id}`} key={index}>
+            <Link to={`/logement/${card.id}`} key={index} role='link'>
                 <article className={style.card}>
                     <img src={card.cover} alt="image cover" className={style.cardImg}/>
                     <div className={style.shadow}></div>

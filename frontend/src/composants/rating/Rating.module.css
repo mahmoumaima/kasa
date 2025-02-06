@@ -8,3 +8,25 @@
     height: 36px;
     padding-bottom: 15px;
 }
+
+/* Téléphone : de 375px à 480px */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+    .stars {
+        justify-content: left;
+    }
+    
+    .stars img {
+        width: 12px;
+        height: 12px;
+        padding-bottom: 5px;
+    }
+}
+  
+/* Tablette : de 481px à 1024px */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .stars img {
+        width: 24px;
+        height: 24px;
+        padding-bottom: 10px;
+    }
+}

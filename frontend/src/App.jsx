@@ -7,7 +7,7 @@ import Footer from './composants/footer/Footer';
 // Pages
 import Accueil from './pages/acceuil/Accueil';
 import Apropos from './pages/apropos/Apropos';
-import Logement from './pages/logement/Logement';
+import Logement from './pages/logement/logement';
 
 // Page d'erreur
 import Error404 from './pages/error/Error404';

@@ -1,3 +1,15 @@
 .collapsList {
   margin: 50px 0px 50px 0px;
 }
+
+/* Media Queries pour rendre le site responsive */
+
+/* Téléphone : de 375px à 480px */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+
+}
+  
+/* Tablette : de 481px à 1024px */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+
+}

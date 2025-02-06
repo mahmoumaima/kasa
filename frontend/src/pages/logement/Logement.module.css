@@ -62,23 +62,12 @@
 }
 
 /* Media Queries pour rendre le site responsive */
-@media (max-width: 768px) {
 
-}
-
-@media (max-width: 480px) {
-
+/* Téléphone : de 375px à 480px */
+@media screen and (min-width: 375px) and (max-width: 480px) {
   .logement {
     grid-template-columns: 1fr; /* 1 colonne */
   }
-
-  /* Réorganisation des éléments */
-  .itemLeft:nth-of-type(1) { order: 1; } /* Titre et localisation */
-  .itemLeft:nth-of-type(2) { order: 2; } /* Tags */
-  .itemRight:nth-of-type(1) { order: 3; } /* Profil */
-  .itemRight:nth-of-type(2) { order: 4; } /* Rating */
-  .itemLeft:nth-of-type(3) { order: 5; } /* Description */
-  .itemRight:nth-of-type(3) { order: 6; } /* Équipements */
 
   .title h1 {
     color: #FF6060;
@@ -92,5 +81,20 @@
     font-weight: 200;
     line-height: 10px;
   }
+}
 
+/* Tablette : de 481px à 1024px */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .title h1 {
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 30px;
+  }
+  
+  .title h2 {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 10px;
+  }
 }

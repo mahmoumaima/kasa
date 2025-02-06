@@ -1,4 +1,5 @@
 import styles from "./Rating.module.css";
+
 const starOn = '/src/assets/starOn.svg';
 const starOff = '/src/assets/starOff.svg';
 

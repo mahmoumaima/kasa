@@ -7,15 +7,9 @@
 }
 
 /* Media Queries pour rendre le site responsive */
-@media (max-width: 768px) {
-    .copyright {
-        font-size: 164px;
-        font-weight: 350;
-        line-height: 24px;
-    }
-}
-  
-@media (max-width: 480px) {
+
+/* Téléphone : de 375px à 480px */
+@media screen and (min-width: 375px) and (max-width: 480px) {
     .copyright {
         font-size: 12px;
         font-weight: 250;
@@ -28,6 +22,15 @@
 
     footer img {
         height: 20px;
+    }
+}
+  
+/* Tablette : de 481px à 1024px */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .copyright {
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 24px;
     }
 }
   
