@@ -49,7 +49,36 @@ function Logement() {
             <Carrousel images={logement.pictures} />
           </section>
           <section className={styles.logement}>
-          <div className={styles.itemLeft}>
+            <div className={styles.logement-infos-container}>
+              <div className={styles.left-container}>
+                <div className={styles.location}>
+                  {/* <div className={`${styles.left} ${styles.title}`}> */}
+                    <h1>{logement.title}</h1>
+                    <h2>{logement.location}</h2>
+                  {/* </div> */}
+                </div>
+                <div className={styles.tags}>
+                  {/* <div className={styles.left}> */}
+                  <Tags tags={logement.tags}/>
+                  {/* </div> */}
+                </div>
+              </div>
+              <div className={styles.right-container}>
+                <div className={styles.host}>
+                  {/* <div className={styles.right}> */}
+                    <Profil name={logement.host.name} picture={logement.host.picture}/>
+                  {/* </div> */}
+                </div>
+                
+                <div className={styles.rating}>
+                  {/* <div className={styles.right}> */}
+                    <Rating rate={logement.rating}/>
+                  {/* </div> */}
+                </div>
+              </div>
+            </div>
+
+          {/* <div className={styles.itemLeft}>
             <div className={`${styles.left} ${styles.title}`}>
               <h1>{logement.title}</h1>
               <h2>{logement.location}</h2>
@@ -69,7 +98,7 @@ function Logement() {
             <div className={styles.right}>
               <Rating rate={logement.rating}/>
             </div>
-          </div>
+          </div> */}
           <div className={styles.itemLeft}>
             <div className={styles.left}>
               <Collaps title="Description" key="collaps-1">
