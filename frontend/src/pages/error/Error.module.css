@@ -28,7 +28,8 @@
 @media screen and (max-width: 1024px) {
 
 }
-/* Téléphone : de 375px à 480px */
+
+/* Téléphone : max 480px */
 @media screen  and (max-width: 480px) {
     .errorPage {
         width: 100%;

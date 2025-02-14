@@ -49,40 +49,9 @@
 }
 
 /* Media Queries pour rendre le site responsive */
-
-/* Téléphone : de 375px à 480px */
-@media screen and (min-width: 375px) and (max-width: 480px) {
-    .collaps {
-        border-radius: 5px;
-        margin-bottom: 5px;
-    }
-    
-    .collapsHeader {
-        padding: 5px;
-    }
-    
-    .collapsHeader h2 {
-        font-size: 12px;
-    }
-    
-    .collapsHeader img {
-        width: 10px;
-        height: 10px;
-        transition: transform 300ms ease;
-    }
-      
-    .collapsDescription {
-        padding: 5px;
-        font-size: 10px;
-    }
-    
-    .collapsDescription.open {
-        min-height: 50px;
-    }
-}
   
 /* Tablette : de 481px à 1024px */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .collaps {
         border-radius: 10px;
         margin-bottom: 10px;
@@ -109,6 +78,37 @@
     
     .collapsDescription.open {
         min-height: 80px;
+    }
+}
+
+/* Téléphone : max 480px */
+@media screen and (max-width: 480px) {
+    .collaps {
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .collapsHeader {
+        padding: 5px;
+    }
+    
+    .collapsHeader h2 {
+        font-size: 12px;
+    }
+    
+    .collapsHeader img {
+        width: 10px;
+        height: 10px;
+        transition: transform 300ms ease;
+    }
+      
+    .collapsDescription {
+        padding: 5px;
+        font-size: 10px;
+    }
+    
+    .collapsDescription.open {
+        min-height: 50px;
     }
 }
   

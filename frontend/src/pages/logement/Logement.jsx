@@ -1,128 +1,74 @@
 import styles from './Logement.module.css'
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import Collaps from '../../composants/collaps/Collaps';
-import Carrousel from '../../composants/carousel/Carrousel';
-import Rating from '../../composants/rating/Rating';
-import Tags from '../../composants/tags/Tags';
-import Profil from '../../composants/profil/Profil';
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import Collaps from '../../composants/collaps/Collaps'
+import Carrousel from '../../composants/carousel/Carrousel'
+import Rating from '../../composants/rating/Rating'
+import Tags from '../../composants/tags/Tags'
+import Profil from '../../composants/profil/Profil'
 
 function Logement() {
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const [logement, setLogement] = useState(null)
 
-    // Récupère l'ID depuis l'URL
-    const { id } = useParams();
-
-    // Pour rediriger
-    const navigate = useNavigate();
-
-    // Déclare un état pour stocker un logement
-    const [logement, setLogement] = useState(null);
-
-    
-    // Appel API lors du premier rendu du composant
-    useEffect(() => {
-      const fetchLogement = async () => {
-        try {
-          const response = await fetch(`http://localhost:8080/api/properties/${id}`);
-          
-          // Vérifiez si le statut HTTP est une erreur
-          if (!response.ok) {
-            throw new Error("Logement introuvable");
-          }
-
-          const data = await response.json();
-          setLogement(data); // Stocker le logement dans l'état
-        } catch (err) {
-          console.error("Erreur lors de la récupération du logement :", err);
-          navigate("/404", { replace: true }); // Redirection vers la page 404
+  useEffect(() => {
+    const fetchLogement = async () => {
+      try {
+        const response = await fetch(`http://localhost:8080/api/properties/${id}`)
+        if (!response.ok) {
+          throw new Error("Logement introuvable")
         }
-      };
-
-      fetchLogement();
-    }, [id, navigate]);
+        const data = await response.json()
+        setLogement(data)
+      } catch (err) {
+        console.error("Erreur lors de la récupération du logement :", err)
+        navigate("/404", { replace: true })
+      }
+    }
+    fetchLogement()
+  }, [id, navigate])
 
   return (
     <>
-      { logement? (
+      {logement && (
         <div>
-          <section className={styles.carroussel}>
+          <section className={styles.carrousel}>
             <Carrousel images={logement.pictures} />
           </section>
           <section className={styles.logement}>
-            <div className={styles.logement-infos-container}>
-              <div className={styles.left-container}>
-                <div className={styles.location}>
-                  {/* <div className={`${styles.left} ${styles.title}`}> */}
-                    <h1>{logement.title}</h1>
-                    <h2>{logement.location}</h2>
-                  {/* </div> */}
+            <div className={styles.informations}>
+              <div className={styles.left}>
+                <div className={styles.title}>
+                  <h1>{logement.title}</h1>
+                  <h2>{logement.location}</h2>
                 </div>
-                <div className={styles.tags}>
-                  {/* <div className={styles.left}> */}
-                  <Tags tags={logement.tags}/>
-                  {/* </div> */}
-                </div>
+                <Tags tags={logement.tags} />
               </div>
-              <div className={styles.right-container}>
-                <div className={styles.host}>
-                  {/* <div className={styles.right}> */}
-                    <Profil name={logement.host.name} picture={logement.host.picture}/>
-                  {/* </div> */}
-                </div>
-                
-                <div className={styles.rating}>
-                  {/* <div className={styles.right}> */}
-                    <Rating rate={logement.rating}/>
-                  {/* </div> */}
-                </div>
+              <div className={styles.right}>
+                <Profil name={logement.host.name} picture={logement.host.picture} />
+                <Rating rate={logement.rating} />
               </div>
             </div>
-
-          {/* <div className={styles.itemLeft}>
-            <div className={`${styles.left} ${styles.title}`}>
-              <h1>{logement.title}</h1>
-              <h2>{logement.location}</h2>
+            <div className={styles.details}>
+              <div className={styles.bottom}>
+                <Collaps title="Description" key="collaps-1">
+                  <p className={styles.description}>{logement.description}</p>
+                </Collaps>
+                <Collaps title="Equipments" key="collaps-2">
+                  <ul className={styles.equipements}>
+                    {logement.equipments.map((equipment, index) => (
+                      <li key={index}>{equipment}</li>
+                    ))}
+                  </ul>
+                </Collaps>
+              </div>
             </div>
-          </div>
-          <div className={styles.itemRight}>
-            <div className={styles.right}>
-              <Profil name={logement.host.name} picture={logement.host.picture}/>
-            </div>
-          </div>
-          <div className={styles.itemLeft}>
-            <div className={styles.left}>
-            <Tags tags={logement.tags}/>
-            </div>
-          </div>
-          <div className={styles.itemRight}>
-            <div className={styles.right}>
-              <Rating rate={logement.rating}/>
-            </div>
-          </div> */}
-          <div className={styles.itemLeft}>
-            <div className={styles.left}>
-              <Collaps title="Description" key="collaps-1">
-                <p className={styles.description}>{logement.description}</p>
-              </Collaps>
-            </div>
-          </div>
-          <div className={styles.itemRight}>
-            <div className={styles.right}>
-              <Collaps title="Equipments" key="collaps-2">
-                <div className={styles.equipements}>
-                        <ul> 
-                            {logement.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                            ))}
-                        </ul>
-                </div>
-              </Collaps>
-            </div>
-          </div>
           </section>
         </div>
-      ) : ''}
+      )}
     </>
-  );
+  )
 }
+
 export default Logement

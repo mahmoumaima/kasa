@@ -36,8 +36,26 @@ a {
 
 /* Media Queries pour rendre le site responsive */
 
-/* Téléphone : de 375px à 480px */
-@media screen and (min-width: 375px) and (max-width: 480px) {
+/* Tablette : de 481px à 1024px */
+@media screen and (max-width: 1024px) {
+  header img {
+    width: 150px;
+  }
+  
+  header ul {
+    gap: 30px;
+  }
+
+  header a {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}
+
+/* Téléphone : max 480px */
+@media screen and (max-width: 480px) {
   header img {
     width: 90px;
   }
@@ -48,24 +66,6 @@ a {
 
   header a {
     font-size: 12px;
-    font-weight: 300;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
-}
-
-/* Tablette : de 481px à 1024px */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  header img {
-    width: 150px;
-  }
-
-  header ul {
-    gap: 30px;
-  }
-
-  header a {
-    font-size: 18px;
     font-weight: 300;
     line-height: 24px;
     text-transform: uppercase;

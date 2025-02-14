@@ -37,8 +37,16 @@
 
 /* Media Queries pour rendre le site responsive */
 
-/* Téléphone : de 375px à 480px */
-@media screen and (min-width: 375px) and (max-width: 480px) {
+/* Tablette : de 481px à 1024px */
+@media screen and (max-width: 1024px) {
+  .textOverlay {
+    left: 40%;
+    font-size: 30px;
+  }
+}
+
+/* Téléphone : max 480px */
+@media screen and (max-width: 480px) {
   .textOverlay {
     top: 50%; 
     left: 40%;
@@ -49,12 +57,4 @@
   .banner {
     height: 110px;
   }
-}
-
-/* Tablette : de 481px à 1024px */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-  .textOverlay {
-    left: 40%;
-    font-size: 30px;
-}
 }

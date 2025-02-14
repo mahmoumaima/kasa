@@ -1,6 +1,7 @@
 .profil {
     display: flex;
     justify-content: right;
+    align-items: center;
     gap: 10px;
 }
 
@@ -22,8 +23,20 @@
 
 /* Media Queries pour rendre le site responsive */
 
-/* Téléphone : de 375px à 480px */
-@media screen and (min-width: 375px) and (max-width: 480px) {
+/* Tablette : de 481px à 1024px */
+@media screen and (max-width: 1024px) {
+    .profil h1 {
+        font-size: 16px;
+    }
+    
+    .profil img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Téléphone : max 480px */
+@media screen and (max-width: 480px) {
     .profil {
         justify-content: left;
     }
@@ -36,17 +49,5 @@
     .profil img {
         width: 24px;
         height: 24px;
-    }
-}
-  
-/* Tablette : de 481px à 1024px */
-@media screen and (min-width: 481px) and (max-width: 1024px) {
-    .profil h1 {
-        font-size: 16px;
-    }
-    
-    .profil img {
-        width: 32px;
-        height: 32px;
     }
 }
