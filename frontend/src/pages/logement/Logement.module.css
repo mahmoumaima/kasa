@@ -95,6 +95,10 @@
 /* Mobile : max 480px */
 @media screen and (max-width: 480px) {
 
+  .bottom {
+    flex-direction: column;
+  }
+
   .informations {
     flex-direction: column;
     gap: 10px;
