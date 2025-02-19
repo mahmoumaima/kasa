@@ -14,22 +14,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 115px;
+    min-width: 115px;
     height: 25px;
     background-color: #FF6060;
     border-radius: 10px;
     text-align: center;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 12px; 
+    padding: 0 10px;
+    white-space: nowrap;
 }
   
-/* Tablette : de 481px à 1024px */
-@media screen and (max-width: 1024px) {
-
-}
-
 /* Téléphone : max 480px */
 @media screen and (max-width: 480px) {
-
+    .tags ul {
+        display: flex;
+        flex-wrap: wrap;     
+    }
 }
