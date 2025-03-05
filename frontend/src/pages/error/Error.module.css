@@ -3,11 +3,11 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
-    width: 597px;
     height: 100%;
     margin: 0 auto;
     color: #FF6060;
     padding-bottom: 50px;
+    width: 100%;
 }
 
 .errorPage h1 {
@@ -23,11 +23,6 @@
 }
 
 /* Media Queries pour rendre le site responsive */
-
-/* Tablette : de 481px à 1024px */
-@media screen and (max-width: 1024px) {
-
-}
 
 /* Téléphone : max 480px */
 @media screen  and (max-width: 480px) {

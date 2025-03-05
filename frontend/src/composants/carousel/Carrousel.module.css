@@ -53,9 +53,6 @@
 /* Media Queries pour rendre le site responsive */
 
 /* Tablette : de 481px à 1024px */
-@media screen and (max-width: 1024px) {
-
-}
 
 /* Téléphone : max 480px */
 @media screen and (max-width: 480px) {
