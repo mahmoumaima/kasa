@@ -4,7 +4,7 @@
     height: 223px;
     border-radius: 20px; /* Arrondir les bords */
     overflow: hidden;
-}
+  }
 
 .banner::before {
     content: '';

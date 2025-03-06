@@ -9,17 +9,17 @@ html, body {
   height: 100%;
 }
 
-body {
+/*body {
   display: flex;
   justify-content: center;
-}
+}*/
 
 #root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  max-width: 1440px;
+  /*max-width: 1440px;*/
   min-height: 100vh; /* Remplace min-height par 100% de la hauteur de l'écran */
   background-color: white;
 }
@@ -30,12 +30,21 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem; /* Utilisation d'unités relatives */
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 main {
-  flex: 1;
   padding: 0 2rem; /* Espacement flexible */
-  display: block;
+  /*display: block;*/
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 80vh;
 }
 
 footer {
