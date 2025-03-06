@@ -6,6 +6,8 @@
   flex-wrap: wrap;
   gap: 45px; 
   padding: 45px;
+  border-radius: 20px;
+  justify-content: center;
 }
 
 .gallery a {

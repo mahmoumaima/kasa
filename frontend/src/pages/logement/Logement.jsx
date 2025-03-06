@@ -52,10 +52,10 @@ function Logement() {
             </div>
             <div className={styles.details}>
               <div className={styles.bottom}>
-                <Collaps title="Description" key="collaps-1">
+                <Collaps title="Description">
                   <p className={styles.description}>{logement.description}</p>
                 </Collaps>
-                <Collaps title="Equipments" key="collaps-2">
+                <Collaps title="Equipments">
                   <ul className={styles.equipements}>
                     {logement.equipments.map((equipment, index) => (
                       <li key={index}>{equipment}</li>

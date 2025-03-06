@@ -42,6 +42,7 @@
 
 .count {
     position: absolute;
+    display: block;
     bottom: 0;
     width: 100%;
     padding: 25px;
@@ -51,8 +52,6 @@
 
 
 /* Media Queries pour rendre le site responsive */
-
-/* Tablette : de 481px à 1024px */
 
 /* Téléphone : max 480px */
 @media screen and (max-width: 480px) {
@@ -65,7 +64,6 @@
     }
 
     .count {
-        font-size: 12px;
-        padding: 10px;
+        display: none;
     }
 }
