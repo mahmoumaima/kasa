@@ -18,6 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
   min-height: 100vh; /* Remplace min-height par 100% de la hauteur de l'écran */
   background-color: white;
 }
@@ -44,15 +46,6 @@ footer {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-}
-
-.mainContent{
-  max-width: 1440px;
-  margin: auto;
-}
-
-.footerContent {
-  width: 100vw;
 }
   
 /* Tablette : de 481px à 1024px */
